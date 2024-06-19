@@ -15,7 +15,7 @@ use App\Http\Controllers\admin\LaporanController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/', [HomeController::class, 'index'])->name('');
 Auth::routes(['register' => false, 'reset' => false, 'verify' => false]);
 
 Route::group(['prefix' => 'admin', 'namespace' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], function () {

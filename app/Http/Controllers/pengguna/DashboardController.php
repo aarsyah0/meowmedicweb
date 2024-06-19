@@ -11,6 +11,6 @@ class DashboardController extends PenggunaController
     {
         $title = $this->title;
         // $bcrum = $this->bcrum('Dashboard');
-        return view('pengguna.dashboard', compact('title'));
+        return view('landing', compact('title'));
     }
 }
