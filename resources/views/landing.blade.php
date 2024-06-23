@@ -60,7 +60,7 @@
             margin-left: 2rem;
         }
     </style>
-    <link rel="stylesheet" href="{{ asset('landing/css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/landing/css/styles.css') }}">
     <title>Meow Medic </title>
 </head>
 <>
@@ -69,7 +69,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#page-top">
-                <img src="{{ asset('landing/img/judul_kucing.jpg') }}" alt="Meow Medic Logo" class="me-2"
+                <img src="{{ asset('assets/landing/img/judulkucing.png') }}" alt="Meow Medic Logo" class="me-2"
                     style="height: 30px; width: auto;">
                 Meow Medic
             </a>
@@ -104,17 +104,19 @@
             <div class="carousel-inner" role="listbox">
                 <!-- Slide One - Set the background image for this slide in the line below -->
                 <div class="carousel-item active"
-                    style="background-image: url('{{ asset('landing/img/kucing.jpg') }}')">
+                    style="background-image: url('{{ asset('assets/landing/img/kucing.jpg') }}')">
                     <div class="carousel-caption d-none d-md-block">
                     </div>
                 </div>
                 <!-- Slide Two - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('{{ asset('landing/img/kucing2.png') }}')">
+                <div class="carousel-item"
+                    style="background-image: url('{{ asset('assets/landing/img/kucing2.png') }}')">
                     <div class="carousel-caption d-none d-md-block">
                     </div>
                 </div>
                 <!-- Slide Three - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('{{ asset('landing/img/kucing3.png') }}')">
+                <div class="carousel-item"
+                    style="background-image: url('{{ asset('assets/landing/img/kucing3.png') }}')">
                     <div class="carousel-caption d-none d-md-block">
                     </div>
                 </div>
@@ -156,7 +158,8 @@
                     <div class="features-device-mockup enlarged-mockup">
                         <div class="device-wrapper enlarged-device-wrapper">
                             <!-- Menghapus div perangkat, hanya menyisakan gambar -->
-                            <img src="{{ asset('landing/img/nakesbunder.png') }}" alt="nakes" class="enlarged-image">
+                            <img src="{{ asset('assets/landing/img/nakesbunder.png') }}" alt="nakes"
+                                class="enlarged-image">
                         </div>
                     </div>
                 </div>
@@ -184,7 +187,7 @@
                             for efficient management.</p>
                         <button class="btn btn-primary" style="border-radius: 20px; background-color: #85868C;">Hire
                             international talent</button>
-                        <img class="img-fluid" src="{{ asset('landing/img/nakes2.png') }}" alt="..." />
+                        <img class="img-fluid" src="{{ asset('assets/landing/img/nakes2.png') }}" alt="..." />
                     </div>
                 </div>
                 <div class="col-sm-8 col-md-6">
