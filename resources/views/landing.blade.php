@@ -199,16 +199,17 @@
                 <!-- Existing Content -->
                 <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
                     <div class="col-sm-8 col-md-6">
-                        <div class="bg-dark text-black p-3 mb-4" style="border-radius: 20px">
+                        <div class="bg-dark text-black p-3 mb-4" style="border-radius: 20px;">
                             <h3 class="mb-4" style="color: #FFFFFF;">Admin on website</h3>
                             <p class="lead fw-normal mb-5 mb-lg-0" style="color: #ffffff">Filters and check newly
                                 added illnesses diagnosis from veterinarian. Quickly access diagnosis lists and user
                                 directories for efficient management.</p>
-                            <button class="btn btn-primary"
-                                style="border-radius: 20px; background-color: #85868C;">Hire international
+                            <button class="btn"
+                                style="margin-top: 20px; border-radius:20px;background-color: #85868C; color:#fff; box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);">Hire
+                                international
                                 talent</button>
-                            <img class="img-fluid" src="{{ asset('assets/landing/img/nakes2.png') }}"
-                                alt="..." />
+                            <img class="img-fluid" src="{{ asset('assets/landing/img/nakes2.png') }}" alt="..."
+                                style="margin-top: 20px" />
                         </div>
                     </div>
                     <div class="col-sm-8 col-md-6">
@@ -216,8 +217,9 @@
                             <h3 class="mb-4" style="color: #ffff;">Doctors on website</h3>
                             <p style="color: #ffffff;">Access a list of diagnosis histories, allowing them to review
                                 and update information as necessary.</p>
-                            <button class="btn btn-primary"
-                                style="border-radius: 20px; background-color: #85868C;">Convert contractors</button>
+                            <button class="btn"
+                                style="border-radius: 20px; background-color: #85868C; color:#fff">Convert
+                                contractors</button>
                         </div>
 
 
@@ -225,8 +227,9 @@
                             <h3 class="mb-4" style="color: #ffff;">Users on mobile</h3>
                             <p style="color: #ffffff">Utilize diagnoses for informed health decisions and access
                                 detailed diagnosis history for personal health management.</p>
-                            <button class="btn btn-primary"
-                                style="border-radius: 20px; background-color: #85868C;">Convert contractors</button>
+                            <button class="btn"
+                                style="border-radius: 20px; background-color: #85868C; color:#fff;">Convert
+                                contractors</button>
                         </div>
                     </div>
                 </div>
