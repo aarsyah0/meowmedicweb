@@ -72,6 +72,7 @@
     </style>
     <title>Meow Medic</title>
     <link rel="icon" type="image/png" href="assets/landing/img/judulkucing.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -150,10 +151,10 @@
     </header>
 
     <!-- Page Content -->
-    <<section id="features">
+    <section id="features">
         <div class="container px-5 enlarged-container">
             <div class="row gx-5 align-items-center enlarged-row">
-                <div class="col-lg-8 order-lg-1 mb-5 mb-lg-0 enlarged-col">
+                <div class="col-lg-8 order-lg-1 mb-5 mb-lg-0 enlarged-col" data-aos="fade-up" data-aos-duration="1000">
                     <div class="container-fluid px-5 enlarged-container-fluid">
                         <div class="row gx-5 justify-content-center enlarged-row">
                             <div class="col-md-10 text-start enlarged-text-center">
@@ -170,7 +171,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 order-lg-0 text-center enlarged-col">
+                <div class="col-lg-4 order-lg-0 text-center enlarged-col" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="500">
                     <!-- Mockup perangkat pada bagian fitur-->
                     <div class="features-device-mockup enlarged-mockup">
                         <div class="device-wrapper enlarged-device-wrapper">
@@ -182,355 +184,365 @@
                 </div>
             </div>
         </div>
-        </section>
+    </section>
 
-        <hr style="height:3px;border-width:0;color:gray;background-color:gray;width:70%">
+    <hr style="height:3px;border-width:0;color:gray;background-color:gray;width:70%">
 
-        <section class="bg-custom">
-            <div class="container px-5">
-                <!-- New Title Section -->
-                <div class="row gx-5 justify-content-center">
-                    <div class="col-12 text-center mb-5">
-                        <h2 class="display-4 lh-1 mb-4" style="color: #000000; font-weight: bold;">MeowMedic. Your
-                            Go-To Cat Diagnosis and Health Management Solution</h2>
-                    </div>
+    <section class="bg-custom">
+        <div class="container px-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+            <!-- New Title Section -->
+            <div class="row gx-5 justify-content-center">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-4 lh-1 mb-4" style="color: #000000; font-weight: bold;">MeowMedic. Your
+                        Go-To Cat Diagnosis and Health Management Solution</h2>
                 </div>
+            </div>
 
-                <!-- Existing Content -->
-                <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
-                    <div class="col-sm-8 col-md-6">
-                        <div class="bg-dark text-black p-3 mb-4" style="border-radius: 20px;">
+            <!-- Existing Content -->
+            <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between"
+                data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                <div class="col-sm-8 col-md-6">
+                    <div class="bg-dark text-black p-3 mb-4" id="admin-section"
+                        style="border-radius: 28px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); height: 600px; display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
                             <h3 class="mb-4" style="color: #FFFFFF;">Admin on website</h3>
-                            <p class="lead fw-normal mb-5 mb-lg-0" style="color: #ffffff">Filters and check newly
+                            <p class="lead fw-normal mb-5 mb-lg-0" style="color: #ffffff;">Filters and check newly
                                 added illnesses diagnosis from veterinarian. Quickly access diagnosis lists and user
                                 directories for efficient management.</p>
-                            <button class="btn"
-                                style="margin-top: 20px; border-radius:20px;background-color: #85868C; color:#fff; box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);">Hire
-                                international
-                                talent</button>
-                            <img class="img-fluid" src="{{ asset('assets/landing/img/nakes2.png') }}" alt="..."
-                                style="margin-top: 20px" />
                         </div>
-                    </div>
-                    <div class="col-sm-8 col-md-6">
-                        <div class="bg-dark text-white p-3 mb-4" style="border-radius: 20px">
-                            <h3 class="mb-4" style="color: #ffff;">Doctors on website</h3>
-                            <p style="color: #ffffff;">Access a list of diagnosis histories, allowing them to review
-                                and update information as necessary.</p>
+                        <div style="margin-top: 10px;">
                             <button class="btn"
-                                style="border-radius: 20px; background-color: #85868C; color:#fff">Convert
-                                contractors</button>
-                        </div>
-
-
-                        <div class="bg-dark text-black p-3 mb-4" style="border-radius: 20px">
-                            <h3 class="mb-4" style="color: #ffff;">Users on mobile</h3>
-                            <p style="color: #ffffff">Utilize diagnoses for informed health decisions and access
-                                detailed diagnosis history for personal health management.</p>
-                            <button class="btn"
-                                style="border-radius: 20px; background-color: #85868C; color:#fff;">Convert
-                                contractors</button>
+                                style="border-radius: 20px; background-color: #85868C; color: #fff; box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);">Hire
+                                international talent</button>
+                            <div class="img-container"
+                                style="height: 320px; display: flex; justify-content: center; align-items: center; margin-top: 50px;margin-bottom:40px">
+                                <img class="img-fluid" src="{{ asset('assets/landing/img/nakes2.png') }}"
+                                    alt="..." style="max-height: 100%; max-width: 100%; object-fit: contain;" />
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="feature-container">
-                    <div class="feature-box">
-                        <div class="feature">
-                            <h2>Extensive Diagnosis</h2>
-                            <p>Access comprehensive diagnoses for informed pet healthcare.</p>
+                <div class="col-sm-8 col-md-6 d-flex flex-column justify-content-between" style="height: 600px;">
+                    <div class="bg-dark text-white p-3 mb-4"
+                        style="border-radius: 28px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); height: 50%;">
+                        <h3 class="mb-4" style="color: #ffff;">Doctors on website</h3>
+                        <p style="color: #ffffff;">Access a list of diagnosis histories, allowing them to review
+                            and update information as necessary.</p>
+                        <button class="btn"
+                            style="border-radius: 20px; background-color: #85868C; color: #fff; box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);">Convert
+                            contractors</button>
+                    </div>
+                    <div class="bg-dark text-black p-3 mb-4 mt-auto"
+                        style="border-radius: 28px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); height: 50%;">
+                        <h3 class="mb-4" style="color: #ffff;">Users on mobile</h3>
+                        <p style="color: #ffffff;">Utilize diagnoses for informed health decisions and access
+                            detailed diagnosis history for personal health management.</p>
+                        <button class="btn"
+                            style="border-radius: 20px; background-color: #85868C; color: #fff; box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);">Convert
+                            contractors</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-container"data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                <div class="feature-box" style="box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5)">
+                    <div class="feature">
+                        <h2>Extensive Diagnosis</h2>
+                        <p>Access comprehensive diagnoses for informed pet healthcare.</p>
+                    </div>
+                    <div class="feature">
+                        <h2>Personal Health Tracker</h2>
+                        <p>Trusted by 25,000+ customers</p>
+                    </div>
+                    <div class="feature">
+                        <h2>Intuitive Interface</h2>
+                        <p>Enjoy a user-friendly experience for easy navigation and management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr style="height:3px;border-width:0;color:gray;background-color:gray;width:70%">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: ;
+            color: #fff;
+        }
+
+        .feature-container {
+            padding: 40px;
+        }
+
+        .feature-box {
+            background-color: #444;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .feature {
+            text-align: center;
+            width: 30%;
+        }
+
+        .feature h2 {
+            margin-top: 0;
+        }
+
+        .feature p {
+            font-size: 16px;
+        }
+    </style>
+
+    <!-- Page Content -->
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .inner-container {
+                background-color: #A8DADC;
+                padding: 30px;
+                border-radius: 15px;
+                display: inline-block;
+                text-align: left;
+            }
+
+            .header {
+                font-size: 3em;
+                font-weight: bold;
+                margin-bottom: 20px;
+                color: black;
+                text-align: center;
+            }
+
+            .content {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .image-container {
+                flex: 1;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .image-container img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 10px;
+            }
+
+            .text-content {
+                flex: 2;
+                padding: 10px;
+                color: black;
+            }
+
+            .text-content .star {
+                font-size: 2em;
+                color: #FFA726;
+                margin-bottom: 10px;
+            }
+
+            .black-section {
+                background-color: #000;
+                padding: 50px 20px;
+                color: white;
+                text-align: center;
+            }
+
+            .footer {
+                display: flex;
+                justify-content: space-between;
+                padding: 20px;
+                background-color: #1a1a1a;
+                flex-wrap: wrap;
+            }
+
+            .footer div {
+                flex: 1;
+                margin: 10px;
+            }
+
+            .footer div h2 {
+                margin-top: 0;
+            }
+
+            .footer div ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            .footer div ul li {
+                margin: 5px 0;
+            }
+
+            .footer div ul li a {
+                color: white;
+                text-decoration: none;
+            }
+
+            .footer .socials a {
+                display: inline-block;
+                margin: 0 10px;
+                color: white;
+                text-decoration: none;
+            }
+
+            .footer-bottom {
+                text-align: center;
+                padding: 10px;
+                background-color: #121212;
+                border-top: 1px solid #333;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <section class="main-section">
+            <div class="header" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                Get a quick heads-up on your feline <br>friend's health issues, saving you time.
+            </div>
+            <div class="inner-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                <div class="content">
+                    <div class="image-container">
+                        <img src="assets/landing/img/kucingpage.png" alt="Cat Image">
+                    </div>
+                    <div class="text-content">
+                        <div class="star">✱</div>
+                        <p>Helping cat owners stay proactive. Use our app for fast and accurate diagnosis of
+                            feline illnesses, ensuring timely care for your cat's well-being. Easily identify
+                            and address health issues early. Save time, keep your cat healthy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-custom">
+            <div class="container px-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                <!-- New Title Section -->
+                <div class="row gx-5 justify-content-center" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="500">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="display-4 lh-1 mb-4" style="color: #000000">Available on and Mobile.</h2>
+                    </div>
+                </div>
+                <div class="row gx-5 align-items-center" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="500">
+                    <div class="col-sm-8">
+                        <div class="px-5 px-sm-0">
+                            <h3 class="mb-4" style="color: #FB7E5E;">Download our mobile app!</h3>
+                            <p class="lead fw-normal mb-5 mb-lg-0" style="color: #000000;">
+                                Our
+                                mobile app is available for Users and Doctors!</p>
+                            <button class="btn btn-primary"
+                                style="border-radius: 20px; background-color: #FB7E5E;">>Download in Google
+                                play</button>
                         </div>
-                        <div class="feature">
-                            <h2>Personal Health Tracker</h2>
-                            <p>Trusted by 25,000+ customers</p>
-                        </div>
-                        <div class="feature">
-                            <h2>Intuitive Interface</h2>
-                            <p>Enjoy a user-friendly experience for easy navigation and management.</p>
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <img class="img-fluid" src="assets/landing/img/mobilekucing.png" alt="mobilekucing" />
+                    </div>
+                </div>
+
+                <div class="row gx-5 align-items-center" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="500">
+                    <div class="col-sm-4 text-center">
+                        <img class="img-fluid" src="assets/landing/img/pckucing.png" alt="mobilekucing" />
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="px-5 px-sm-0">
+                            <h3 class="mb-4" style="color: #FB7E5E;">Access our website for free!</h3>
+                            <p class="lead fw-normal mb-5 mb-lg-0" style="color: #000000;">Our website are
+                                available for Admins and Doctors</p>
+                            <button class="btn btn-primary"
+                                style="border-radius: 20px; background-color: #FB7E5E">>Sign up for
+                                free!</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <hr style="height:3px;border-width:0;color:gray;background-color:gray;width:70%">
+        <section class="black-section" style="background-color: #1B1B1B">
+            <div class="container">
+                <h1>Empowering cat owners,<br> one purr at a time.</h1>
+            </div>
 
-        <>
-            <style>
-                body {
-                    font-family: Arial, sans-serif;
-                    margin: 0;
-                    padding: 0;
-                    background-color: ;
-                    color: #fff;
-                }
+            <hr style="height:3px;border-width:0;color:gray;background-color:gray;width:70%">
+        </section>
 
-                .feature-container {
-                    padding: 40px;
-                }
+        <footer class="footer">
+            <div class="about" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                <h2><img src="assets/landing/img/judulkucing.png" alt="Meow Medic Logo"> <a href="#"
+                        style="color: #ffff"><br>meow
+                        medic</a></h2>
+                <a href="#" style="color: #ffff">Empower yourself as a responsible cat owner with meow
+                    medic. Our
+                    comprehensive database and expert-curated information provide invaluable insights into
+                    feline health. Stay informed, proactive, and confident in managing your cat's
+                    well-being.</a>
+            </div>
+            <div class="socials" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                <h2><a href="#">Sitemap</a></h2>
+                <ul>
+                    <li><a href="#">Login user</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Download</a></li>
+                </ul>
+            </div>
+            <div class="socials" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                <h2><a href="#">Connect with us</a></h2>
+                <ul>
+                    <li><a href= "#">Email: meowmedic@gmail.com</a></li>
+                    <li><a href="#">Phone: +628653495224</a></li>
+                    <li><a href="#">Address: Jl. Mastrip, Krajan Timur, Sumbersari, Kec. Sumbersari,
+                            Kabupaten Jember, Jawa Timur 68121</a></li>
+                </ul>
+            </div>
+            <div class="socials" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                <h2><a href="#">Socials</a></h2>
+                <a href="#" target="_blank">@meowmedic_</a>
+                <a href="#" target="_blank">@meowmedic</a>
+                <a href="#" target="_blank">@meow_medic</a>
+            </div>
+        </footer>
 
-                .feature-box {
-                    background-color: #444;
-                    padding: 20px;
-                    border-radius: 10px;
-                    display: flex;
-                    justify-content: space-around;
-                }
+        <div class="footer-bottom">
+            &copy; Copyright 2024. All Rights Reserved.
+        </div>
 
-                .feature {
-                    text-align: center;
-                    width: 30%;
-                }
-
-                .feature h2 {
-                    margin-top: 0;
-                }
-
-                .feature p {
-                    font-size: 16px;
-                }
-            </style>
-
-            <!-- Page Content -->
-            <html lang="en">
-
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <style>
-                    .inner-container {
-                        background-color: #A8DADC;
-                        padding: 30px;
-                        border-radius: 15px;
-                        display: inline-block;
-                        text-align: left;
-                    }
-
-                    .header {
-                        font-size: 3em;
-                        font-weight: bold;
-                        margin-bottom: 20px;
-                        color: black;
-                        text-align: center;
-                    }
-
-                    .content {
-                        display: flex;
-                        align-items: center;
-                        flex-wrap: wrap;
-                    }
-
-                    .image-container {
-                        flex: 1;
-                        text-align: center;
-                        padding: 10px;
-                    }
-
-                    .image-container img {
-                        max-width: 100%;
-                        height: auto;
-                        border-radius: 10px;
-                    }
-
-                    .text-content {
-                        flex: 2;
-                        padding: 10px;
-                        color: black;
-                    }
-
-                    .text-content .star {
-                        font-size: 2em;
-                        color: #FFA726;
-                        margin-bottom: 10px;
-                    }
-
-                    .black-section {
-                        background-color: #000;
-                        padding: 50px 20px;
-                        color: white;
-                        text-align: center;
-                    }
-
-                    .footer {
-                        display: flex;
-                        justify-content: space-between;
-                        padding: 20px;
-                        background-color: #1a1a1a;
-                        flex-wrap: wrap;
-                    }
-
-                    .footer div {
-                        flex: 1;
-                        margin: 10px;
-                    }
-
-                    .footer div h2 {
-                        margin-top: 0;
-                    }
-
-                    .footer div ul {
-                        list-style: none;
-                        padding: 0;
-                    }
-
-                    .footer div ul li {
-                        margin: 5px 0;
-                    }
-
-                    .footer div ul li a {
-                        color: white;
-                        text-decoration: none;
-                    }
-
-                    .footer .socials a {
-                        display: inline-block;
-                        margin: 0 10px;
-                        color: white;
-                        text-decoration: none;
-                    }
-
-                    .footer-bottom {
-                        text-align: center;
-                        padding: 10px;
-                        background-color: #121212;
-                        border-top: 1px solid #333;
-                    }
-                </style>
-            </head>
-
-            <body>
-
-                <section class="main-section">
-                    <div class="header">
-                        Get a quick heads-up on your feline <br>friend's health issues, saving you time.
-                    </div>
-                    <div class="inner-container">
-                        <div class="content">
-                            <div class="image-container">
-                                <img src="assets/landing/img/kucingpage.png" alt="Cat Image">
-                            </div>
-                            <div class="text-content">
-                                <div class="star">✱</div>
-                                <p>Helping cat owners stay proactive. Use our app for fast and accurate diagnosis of
-                                    feline illnesses, ensuring timely care for your cat's well-being. Easily identify
-                                    and address health issues early. Save time, keep your cat healthy.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="bg-custom">
-                    <div class="container px-5">
-                        <!-- New Title Section -->
-                        <div class="row gx-5 justify-content-center">
-                            <div class="col-12 text-center mb-5">
-                                <h2 class="display-4 lh-1 mb-4" style="color: #000000">Available on and Mobile.</h2>
-                            </div>
-                        </div>
-                        <div class="row gx-5 align-items-center">
-                            <div class="col-sm-8">
-                                <div class="px-5 px-sm-0">
-                                    <h3 class="mb-4" style="color: #FB7E5E;">Download our mobile app!</h3>
-                                    <p class="lead fw-normal mb-5 mb-lg-0"
-                                        style="color: #000000
-
-                        ;">Our
-                                        mobile app is available for Users and Doctors!</p>
-                                    <button class="btn btn-primary"
-                                        style="border-radius: 20px; background-color: #FB7E5E;">>Download in Google
-                                        play</button>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 text-center">
-                                <img class="img-fluid" src="assets/landing/img/mobilekucing.png"
-                                    alt="mobilekucing" />
-                            </div>
-                        </div>
-
-                        <div class="row gx-5 align-items-center">
-                            <div class="col-sm-4 text-center">
-                                <img class="img-fluid" src="assets/landing/img/pckucing.png" alt="mobilekucing" />
-                            </div>
-                            <div class="col-sm-8">
-                                <div class="px-5 px-sm-0">
-                                    <h3 class="mb-4" style="color: #FB7E5E;">Access our website for free!</h3>
-                                    <p class="lead fw-normal mb-5 mb-lg-0" style="color: #000000;">Our website are
-                                        available for Admins and Doctors</p>
-                                    <button class="btn btn-primary"
-                                        style="border-radius: 20px; background-color: #FB7E5E">>Sign up for
-                                        free!</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="black-section" style="background-color: #1B1B1B">
-                    <div class="container">
-                        <h1>Empowering cat owners,<br> one purr at a time.</h1>
-                    </div>
-
-                    <hr style="height:3px;border-width:0;color:gray;background-color:gray;width:70%">
-                </section>
-
-                <footer class="footer">
-                    <div class="about">
-                        <h2><img src="assets/landing/img/judulkucing.png" alt="Meow Medic Logo"> <a href="#"
-                                style="color: #ffff"><br>meow
-                                medic</a></h2>
-                        <a href="#" style="color: #ffff">Empower yourself as a responsible cat owner with meow
-                            medic. Our
-                            comprehensive database and expert-curated information provide invaluable insights into
-                            feline health. Stay informed, proactive, and confident in managing your cat's
-                            well-being.</a>
-                    </div>
-                    <div class="socials">
-                        <h2><a href="#">Sitemap</a></h2>
-                        <ul>
-                            <li><a href="#">Login user</a></li>
-                            <li><a href="#">Features</a></li>
-                            <li><a href="#">Download</a></li>
-                        </ul>
-                    </div>
-                    <div class="socials">
-                        <h2><a href="#">Connect with us</a></h2>
-                        <ul>
-                            <li><a href= "#">Email: meowmedic@gmail.com</a></li>
-                            <li><a href="#">Phone: +628653495224</a></li>
-                            <li><a href="#">Address: Jl. Mastrip, Krajan Timur, Sumbersari, Kec. Sumbersari,
-                                    Kabupaten Jember, Jawa Timur 68121</a></li>
-                        </ul>
-                    </div>
-                    <div class="socials">
-                        <h2><a href="#">Socials</a></h2>
-                        <a href="#" target="_blank">@meowmedic_</a>
-                        <a href="#" target="_blank">@meowmedic</a>
-                        <a href="#" target="_blank">@meow_medic</a>
-                    </div>
-                </footer>
-
-                <div class="footer-bottom">
-                    &copy; Copyright 2024. All Rights Reserved.
-                </div>
-
-            </body>
-            </section>
+    </body>
+    </section>
 
 
 
-            <!-- /.container -->
-            <!-- Optional JavaScript -->
-            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-            </script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-                integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
-            </script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-                integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
-            </script>
-            <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
-
+    <!-- /.container -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
