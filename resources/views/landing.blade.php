@@ -59,8 +59,19 @@
             font-size: 60px;
             margin-left: 2rem;
         }
+
+        .nav-item {
+            margin-right: 20px;
+
+        }
+
+        .nav-item:last-child {
+            margin-right: 0;
+
+        }
     </style>
-    <title>Hello, world!</title>
+    <title>Meow Medic</title>
+    <link rel="icon" type="image/png" href="assets/landing/img/judulkucing.png">
 </head>
 
 <body>
@@ -85,9 +96,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Download</a>
                     </li>
-                    <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal"
-                        data-bs-target="#feedbackModal">
-                        <span class="big">Login</span>
+                    <button class="btn btn-dark px-4 mb-2 mb-lg-0" data-bs-toggle="modal"
+                        data-bs-target="#feedbackModal" style="border-radius: 25px;">
+                        <a href="{{ route('login') }}" style="color: #fff">Login</a>
                     </button>
                 </ul>
             </div>
@@ -460,10 +471,11 @@
 
                 <footer class="footer">
                     <div class="about">
-                        <h2><img src="assets/landing/img/judulkucing.png" alt="Meow Medic Logo"> <a
-                                href="#"><br>meow
+                        <h2><img src="assets/landing/img/judulkucing.png" alt="Meow Medic Logo"> <a href="#"
+                                style="color: #ffff"><br>meow
                                 medic</a></h2>
-                        <a href="#">Empower yourself as a responsible cat owner with meow medic. Our
+                        <a href="#" style="color: #ffff">Empower yourself as a responsible cat owner with meow
+                            medic. Our
                             comprehensive database and expert-curated information provide invaluable insights into
                             feline health. Stay informed, proactive, and confident in managing your cat's
                             well-being.</a>
