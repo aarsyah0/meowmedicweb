@@ -3,118 +3,147 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Login &mdash; {{ config('app.name') }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Load Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #3D405B;
+            height: 100vh;
+            color: white;
+        }
 
-    <!-- General CSS Files -->
-    <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        .bg-custom {
+            background-color: #3D405B !important;
+        }
 
-    <!-- CSS Libraries -->
+        .btn-custom {
+            background-color: #ff6f61;
+            border: none;
+            font-size: 18px;
+            padding: 12px;
+            border-radius: 25px;
+        }
 
-    <!-- Template CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/admin/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/admin/css/components.css') }}">
+        .btn-custom:hover {
+            background-color: #e65a50;
+        }
+
+        .form-control-custom {
+            max-width: 350px;
+            font-size: 18px;
+            padding: 12px 40px 12px 12px;
+            /* Menambahkan ruang di sebelah kanan untuk ikon */
+            border-radius: 25px;
+            width: 100%
+        }
+
+        .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+            background-color: #ff6f61;
+            border-radius: 50%;
+        }
+
+        .custom-checkbox .custom-control-label::before {
+            border-radius: 50%;
+        }
+
+        .input-group .form-control {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .input-group-append {
+            background-color: white;
+            border-left: none;
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+        }
+
+        .input-group-text {
+            border-left: none;
+            background: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="app">
-        <section class="section">
-            <div class="container mt-5">
-                <div class="row">
-                    <div
-                        class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
-                        <div class="login-brand">
-                            <strong class="text-primary">{{ config('app.name') }}</strong>
-                        </div>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-start p-5 bg-custom">
+                <h1>WELCOME BACK!</h1>
+                <p>Don't have an account? <a href="#" class="text-primary">Sign up</a></p>
+                <!-- Add server-side validation errors here -->
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                <form method="POST" action="{{ route('login') }}" class="w-100">
+                    @csrf
+                    <!-- Label untuk input Username dengan warna EFE3D3 -->
+                    <label for="username" style="color: #efe3d3; margin-bottom: 5px;">Username or
+                        E-Mail</label>
+                    <input type="text" id="username" name="username" class="form-control form-control-custom mb-3"
+                        placeholder="Username or E-Mail" value="{{ old('username') }}">
 
-                        <div class="card card-primary">
-                            <div class="card-header">
-                                <h4>{{ __('Login') }}</h4>
-                            </div>
-                            @error('gagal')
-                                <div class="alert alert-danger" role="alert">
-                                    {{ $message }}
-                                </div>
-                            @enderror
-                            <div class="card-body">
-                                <form method="POST" action="{{ route('login') }}">
-                                    @csrf
-                                    <div class="form-group">
-                                        <label for="username">{{ __('Username atau E-Mail') }}</label>
-                                        <input id="username" type="text"
-                                            class="form-control @error('username') is-invalid @enderror "
-                                            name="username" value="{{ old('username') }}" tabindex="1" autofocus>
-                                        @error('username')
-                                            <div class="invalid-feedback">
-                                                {{ $message }}
-                                            </div>
-                                        @enderror
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="d-block">
-                                            <label for="password" class="control-label">{{ __('Password') }}</label>
-                                        </div>
-                                        <input id="password" type="password"
-                                            class="form-control @error('password') is-invalid @enderror" name="password"
-                                            tabindex="2">
-                                        @error('password')
-                                            <div class="invalid-feedback">
-                                                {{ $message }}
-                                            </div>
-                                        @enderror
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" name="remember" class="custom-control-input"
-                                                tabindex="3" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                                            <label class="custom-control-label"
-                                                for="remember">{{ __('Remember Me') }}</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
-                                            {{ __('Login') }}
-                                        </button>
-                                        <a href="{{ route('pengguna.dashboard') }}"
-                                            class="btn btn-secondary btn-lg btn-block"
-                                            tabindex="5">{{ __('Kembali') }}</a>
-                                    </div>
-                                </form>
-                                <div class="form-group" style="text-align: center;">
-                                    Reposted by <a href="arsyahjoki.id" target="_blank"
-                                        rel="noopener noreferrer">ArsyahJoki.com</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="simple-footer">
-                            Copyright &copy; 2024 {{ config('app.name') }}
+                    <label for="password" style="color: #efe3d3; margin-bottom: 5px;">Password</label>
+                    <!-- Input password dengan ikon mata untuk menyembunyikan atau menampilkan teks -->
+                    <div class="input-group mb-3">
+                        <input type="password" id="password" name="password" class="form-control form-control-custom"
+                            placeholder="Password">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="togglePassword" style="border-radius: 20px">
+                                <i class="fas fa-eye"></i>
+                            </span>
                         </div>
                     </div>
-                </div>
+                    <div class="d-flex justify-content-between align-items-center mb-3 w-100">
+                        <div class="custom-control custom-checkbox" style="margin-left: 10px;">
+                            <input type="checkbox" class="custom-control-input" id="rememberMe" name="remember">
+                            <label class="custom-control-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <a href="#" class="text-primary" style="margin-right: 230px;">Forget password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-custom btn-block form-control-custom">Log In</button>
+                </form>
             </div>
-        </section>
+            <div class="col-md-6 d-none d-md-flex justify-content-center align-items-center bg-custom">
+                <img src="assets/landing/img/paw.png" class="img-fluid" alt="Paw with Cats">
+            </div>
+        </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Fungsi untuk mengubah tipe input password menjadi teks dan sebaliknya
+        function togglePassword() {
+            var passwordField = document.getElementById("password");
+            var passwordIcon = document.querySelector("#togglePassword i");
 
-    <!-- General JS Scripts -->
-    <script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/popper/popper.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/nicescroll/jquery.nicescroll.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/moment/moment.min.js') }}"></script>
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                passwordIcon.classList.remove("fa-eye");
+                passwordIcon.classList.add("fa-eye-slash");
+            } else {
+                passwordField.type = "password";
+                passwordIcon.classList.remove("fa-eye-slash");
+                passwordIcon.classList.add("fa-eye");
+            }
+        }
 
-    <!-- JS Libraies -->
-
-    <!-- Template JS File -->
-    <script src="{{ asset('assets/admin/js/stisla.js') }}"></script>
-    <script src="{{ asset('assets/admin/js/scripts.js') }}"></script>
-    <script src="{{ asset('assets/admin/js/custom.js') }}"></script>
-
-    <!-- Page Specific JS File -->
+        // Menambahkan event listener untuk tombol toggle
+        document.getElementById("togglePassword").addEventListener("click", togglePassword);
+    </script>
 </body>
 
 </html>
