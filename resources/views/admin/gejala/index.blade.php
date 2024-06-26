@@ -39,7 +39,7 @@
                                             <td>{{ $gejala->id }}</td>
                                             <td>{{ Str::title($gejala->nama) }}</td>
                                             <td>
-                                                <a class="btn btn-icon btn-warning btn-sm"
+                                                <a class="btn btn-icon btn-success btn-sm"
                                                     href="{{ route('admin.gejala.edit', $gejala->id) }}"><i
                                                         class="fa fa-edit"></i> Ubah</a>
                                                 <form action="{{ route('admin.gejala.destroy', $gejala->id) }}"
@@ -81,7 +81,6 @@
 @endpush
 
 @push('script')
-
     <script>
         // Datatables
         $(document).ready(() => {
@@ -130,5 +129,4 @@
 
         }
     </script>
-
 @endpush

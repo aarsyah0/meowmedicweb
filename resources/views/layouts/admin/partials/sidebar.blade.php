@@ -1,7 +1,7 @@
 <aside id="sidebar-wrapper">
     <div class="sidebar-brand">
         <a href="{{ route('admin.dashboard') }}">
-            <img src="{{ asset('path-to-your-logo.png') }}" alt="Meow Medic" />
+            <img src="{{ asset('assets/landing/img/judulkucing.png') }}" alt="Meow Medic" />
         </a>
     </div>
     <div class="sidebar-brand sidebar-brand-sm">
@@ -10,11 +10,12 @@
     <ul class="sidebar-menu">
         <li class="menu-header">Dashboard</li>
         <li class="nav-item dropdown {{ request()->is('admin/dashboard*') ? 'active' : '' }}">
-            <a href="#" class="nav-link has-dropdown"><i class="fas fa-home"></i><span>Dashboard</span></a>
-            <ul class="dropdown-menu">
+            <a href="{{ route('admin.dashboard') }}" class="nav-link"><i
+                    class="fas fa-home"></i><span>Dashboard</span></a>
+            {{-- <ul class="dropdown-menu">
                 <li><a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard Karyawan</a></li>
                 <li><a class="nav-link" href="{{ route('pengguna.dashboard') }}">Dashboard Pengguna</a></li>
-            </ul>
+            </ul> --}}
         </li>
         <li class="menu-header">Diagnosis</li>
         <li class="{{ request()->is('admin/gejala*') ? 'active' : '' }}">
@@ -42,7 +43,13 @@
                     class="fas fa-envelope"></i><span>Pesan</span></a>
         </li>
         <li>
-            <a href="{{ route('logout') }}" class="nav-link"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
+            <a href="{{ route('logout') }}" class="nav-link has-icon text-danger"
+                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <i class="fas fa-sign-out-alt"></i> <span>Logout</span>
+            </a>
         </li>
     </ul>
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+        @csrf
+    </form>
 </aside>

@@ -80,7 +80,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#page-top">
+            <a class="navbar-brand fw-bold" href="#carouselExampleIndicators">
                 <img src="assets/landing/img/judulkucing.png" alt="Meow Medic Logo" class="me-2"
                     style="height: 30px; width: auto;">
                 Meow Medic
@@ -92,10 +92,10 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About us</a>
+                        <a class="nav-link" href="#features">About us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Download</a>
+                        <a class="nav-link" href="#download">Download</a>
                     </li>
                     <button class="btn btn-dark px-4 mb-2 mb-lg-0" data-bs-toggle="modal"
                         data-bs-target="#feedbackModal" style="border-radius: 25px;">
@@ -118,24 +118,24 @@
                 <div class="carousel-item active"
                     style="background-image: url('{{ asset('assets/landing/img/kucing.jpg') }}')">
                     <div class="carousel-caption d-none d-md-block">
-                        <h2 class="display-4">First Slide</h2>
-                        <p class="lead">This is a description for the first slide.</p>
+                        {{-- <h2 class="display-4">First Slide</h2>
+                        <p class="lead">This is a description for the first slide.</p> --}}
                     </div>
                 </div>
                 <!-- Slide Two - Set the background image for this slide in the line below -->
                 <div class="carousel-item"
                     style="background-image: url('{{ asset('assets/landing/img/kucing2.png') }}')">
                     <div class="carousel-caption d-none d-md-block">
-                        <h2 class="display-4">Second Slide</h2>
-                        <p class="lead">This is a description for the second slide.</p>
+                        {{-- <h2 class="display-4">Second Slide</h2>
+                        <p class="lead">This is a description for the second slide.</p> --}}
                     </div>
                 </div>
                 <!-- Slide Three - Set the background image for this slide in the line below -->
                 <div class="carousel-item"
                     style="background-image: url('{{ asset('assets/landing/img/kucing3.png') }}')">
                     <div class="carousel-caption d-none d-md-block">
-                        <h2 class="display-4">Third Slide</h2>
-                        <p class="lead">This is a description for the third slide.</p>
+                        {{-- <h2 class="display-4">Third Slide</h2>
+                        <p class="lead">This is a description for the third slide.</p> --}}
                     </div>
                 </div>
             </div>
@@ -427,7 +427,7 @@
             </div>
         </section>
 
-        <section class="bg-custom">
+        <section class="bg-custom" id="download">
             <div class="container px-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
                 <!-- New Title Section -->
                 <div class="row gx-5 justify-content-center" data-aos="fade-up" data-aos-duration="1000"
